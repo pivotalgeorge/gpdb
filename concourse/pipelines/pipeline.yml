@@ -1,4 +1,14 @@
 ## ======================================================================
+## resource types
+## ======================================================================
+
+resource_types:
+- name: s3-week-long-urls
+  type: docker-image
+  source:
+    repository: pivotaldata/s3-resource
+
+## ======================================================================
 ## resources
 ## ======================================================================
 
@@ -50,7 +60,7 @@ resources:
     versioned_file: {{sync_tools_gpdb_centos_versioned_file}}
 
 - name: installer_rhel6_gpdb_rc
-  type: s3
+  type: s3-week-long-urls
   source:
     access_key_id: {{bucket-access-key-id}}
     bucket: {{bucket-name}}
@@ -86,7 +96,7 @@ resources:
     versioned_file: deliverables/greenplum-db-appliance-4.3.99.0-build-1-rhel6-x86_64.zip.md5
 
 - name: qautils_rhel6_tarball
-  type: s3
+  type: s3-week-long-urls
   source:
     access_key_id: {{bucket-access-key-id}}
     bucket: {{bucket-name}}
@@ -95,7 +105,7 @@ resources:
     versioned_file: deliverables/QAUtils-rhel6-x86_64.tar.gz
 
 - name: gpdb_src_tinc_tarball
-  type: s3
+  type: s3-week-long-urls
   source:
     access_key_id: {{bucket-access-key-id}}
     bucket: {{bucket-name}}
