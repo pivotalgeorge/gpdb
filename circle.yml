@@ -5,7 +5,7 @@ machine:
 dependencies:
   override:
     - docker info
-    - docker build --rm=false ./src/tools/docker/base:
+    - docker build --rm=false ./docker/base:
         pwd: gpdb/src/tools
 
 
