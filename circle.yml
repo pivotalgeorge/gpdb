@@ -5,14 +5,8 @@ machine:
 dependencies:
   override:
     - docker info
-
-    - type: shell
-      name: Build Gpdp Docker Image
-      pwd: /
-      command: |
-        cd ./src/tools
-        pwd
-        docker build --rm=false ./src/tools/docker/base
+    - docker build --rm=false ./src/tools/docker/base:
+      pwd: gpdb/src/tools
 
 
 #deployment:
