@@ -5,7 +5,7 @@ machine:
 dependencies:
   override:
     - docker info
-    - docker build --rm=false ./src/tools/docker/base/Dockerfile
+    - docker build --rm=false ./src/tools/docker/base
 
 #deployment:
 #  hub:
