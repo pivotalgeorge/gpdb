@@ -5,6 +5,8 @@ machine:
 dependencies:
   override:
     - docker info
+    - pwd:
+        pwd: src/tools
     - docker build --rm=false ./docker/base:
         pwd: src/tools
 
